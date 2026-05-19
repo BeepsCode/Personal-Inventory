@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error {{ error_code }}</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #f4f4f9; 
+            margin: 0; 
+        }
+        .error-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center;
+        }
+        .error-code { 
+            font-size: 72px; 
+            font-weight: bold; 
+            color: #dc3545; 
+            margin: 0 0 10px 0;
+        }
+        .error-message { 
+            color: #666; 
+            font-size: 16px; 
+            margin-bottom: 25px; 
+        }
+        .btn { 
+            display: inline-block;
+            width: 90%; 
+            padding: 12px; 
+            border: none; 
+            border-radius: 4px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-secondary { 
+            background-color: #6c757d; 
+            color: white; 
+        }
+        .btn-secondary:hover { 
+            background-color: #5a6268; 
+        }
+    </style>
+</head>
+<body>
+
+  <div class="error-container">
+    <div class="error-code">{{ error_code }}</div>
+    <p class="error-message">{{ error_message }}</p>
+    
+    <a href="{{ url_for('main.login') }}" class="btn btn-secondary">Try Again</a>
+  </div>
+
+</body>
+</html>

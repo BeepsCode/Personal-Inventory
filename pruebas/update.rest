@@ -1,0 +1,8 @@
+POST http://127.0.0.1:5000/edit/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Teclado Mecanico RGB",
+    "quantity": 8,
+    "price": 95.00
+}
